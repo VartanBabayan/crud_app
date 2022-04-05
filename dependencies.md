@@ -1,0 +1,24 @@
+# All required packages for the project
+
+### Vue CLI
+>npm install -g @vue/cli
+
+</br>
+
+### webapp framework for NodeJS
+>npm install express --save
+
+</br>
+
+### MongoDB
+>npm install mongoose
+
+</br>
+
+### api calls reload automatically
+>npm install nodemon --save-dev
+
+</br>
+
+### environment variables
+>npm install dotenv --save

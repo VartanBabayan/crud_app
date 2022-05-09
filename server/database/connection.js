@@ -8,6 +8,8 @@ const connectDB = mongoose.connect('mongodb://localhost/project',
     useCreateIndex: true
 })
 
+module.exports = connectDB
+
 // const connectDB = async () => {
 //     try{
 //         // mongodb connection string
@@ -24,5 +26,3 @@ const connectDB = mongoose.connect('mongodb://localhost/project',
 //         process.exit(1);
 //     }
 // }
-
-module.exports = connectDB

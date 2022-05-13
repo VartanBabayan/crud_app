@@ -1,5 +1,9 @@
 # All required packages for the project
 
+### third_party
+>npm i express cors body-parser mongodb
+>npm i -D nodemon
+
 ### Vue CLI
 >npm install -g @vue/cli
 

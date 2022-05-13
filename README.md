@@ -1,2 +1,2 @@
 # website
-This project is online likvidometer
+crud application

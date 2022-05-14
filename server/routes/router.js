@@ -28,6 +28,12 @@ route.get('/update-user', services.update_user)
  */
  route.get('/find-user', services.find_user)
 
+ /**
+ *  @description for finding a user
+ *  @method GET /find-user
+ */
+  route.get('/about', services.about)
+
 // API
 route.post('/api/users', controller.create);
 route.get('/api/users', controller.find);

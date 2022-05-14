@@ -29,3 +29,7 @@ exports.update_user = (req, res) =>{
 exports.find_user = (req, res) =>{
     res.render('find_user')
 }
+
+exports.about = (req, res) =>{
+    res.render('about')
+}

@@ -1,6 +1,7 @@
 var Userdb = require('../model/model');
 
 exports.create = (req,res)=>{
+    console.log("didn't work!");
     // validate request
     if(!req.body){
         res.status(400).send({ message : "Content can not be emtpy!"});
@@ -26,6 +27,7 @@ exports.create = (req,res)=>{
 }
 
 exports.find = (req, res) => {
+    console.log("Worked!");
     Userdb.find()
     .then(user => {
         res.send(user)

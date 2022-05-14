@@ -27,11 +27,5 @@ exports.update_user = (req, res) =>{
 }
 
 exports.find_user = (req, res) =>{
-    axios.get('http://localhost:3000/api/users', { params : { id : req.query.id }})
-        .then(function(userdata){
-            res.render("find_user", { user : userdata.data})
-        })
-        .catch(err =>{
-            res.send(err);
-        })
+    res.render('find_user')
 }

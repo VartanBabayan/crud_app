@@ -43,8 +43,8 @@ exports.findOneUser = (req, res) => {
     Userdb.findOne({email})
             .then(data =>{
                 if(!data) {
-                    // res.render('answer.ejs')
-                    res.status(404).send({ message : "Not found user with email "+ email })
+                    res.render('answer.ejs');
+                    //res.status(404).send({ message : "Not found user with email "+ email })
                 } else {
                     res.send(data)
                 }

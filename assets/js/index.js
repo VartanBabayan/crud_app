@@ -2,6 +2,10 @@ $("#add_user").submit(function(event){
     alert("Data Inserted Successfully!");
 })
 
+$("#find_user").submit(function(event){
+    alert("User hasn't been found");
+})
+
 $("#update_user").submit(function(event){
     event.preventDefault();
 

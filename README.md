@@ -20,4 +20,4 @@
 
 #### 
 
-### Directed by: System.Chaos: [Maria Ayanyan], [Aram Harutyunyan], [Vartan Babayan]
+### Directed by System.Chaos: [Maria Ayanyan], [Aram Harutyunyan], [Vartan Babayan]

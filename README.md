@@ -2,6 +2,10 @@
 [express]:https://expressjs.com/
 [node]:https://nodejs.org/en/
 
+[Maria Ayanyan]:https://github.com/mariaayanyan
+[Aram Harutyunyan]:https://github.com/funkvay-star
+[Vartan Babayan]:https://github.com/VartanBabayan
+
 ## CRUD Application - User Management System
 #### The app is developed using [mongo], [express] and [node] stack. You can use it to perform several operations like Create/Read/Update/Delete on users in the system. All users will be contained in the mongodb which is mandatory to have for the project
 </br>
@@ -16,4 +20,4 @@
 
 #### 
 
-## Directed by: System.Chaos
+### Directed by: System.Chaos: [Maria Ayanyan], [Aram Harutyunyan], [Vartan Babayan]

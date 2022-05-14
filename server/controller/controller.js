@@ -1,6 +1,5 @@
 var Userdb = require('../model/model');
 
-// create and save new user
 exports.create = (req,res)=>{
     // validate request
     if(!req.body){
@@ -8,7 +7,6 @@ exports.create = (req,res)=>{
         return;
     }
 
-    // new user
     const user = new Userdb({
         name : req.body.name,
         email : req.body.email,
@@ -16,11 +14,8 @@ exports.create = (req,res)=>{
         status : req.body.status
     })
 
-    // save user in the database
-    user
-        .save(user)
+    user.save(user)
         .then(data => {
-            //res.send(data)
             res.redirect('/add-user');
         })
         .catch(err =>{
@@ -28,10 +23,8 @@ exports.create = (req,res)=>{
                 message : err.message || "Some error occurred while creating a create operation"
             });
         });
-
 }
 
-// retrieve and return all users/ retrive and return a single user
 exports.find = (req, res) => {
     Userdb.find()
     .then(user => {
@@ -42,7 +35,23 @@ exports.find = (req, res) => {
     })
 }
 
-// Update a new idetified user by user id
+exports.findOneUser = (req, res) => {
+    const {email} = req.query
+    console.log(email)
+    Userdb.findOne({email})
+            .then(data =>{
+                if(!data) {
+                    // res.render('answer.ejs')
+                    res.status(404).send({ message : "Not found user with email "+ email })
+                } else {
+                    res.send(data)
+                }
+            })
+            .catch(err => {
+                res.status(500).send({ message: "Erro retrieving user with email " + email })
+            })
+}
+
 exports.update = (req, res)=>{
     if(!req.body){
         return res
@@ -64,7 +73,6 @@ exports.update = (req, res)=>{
         })
 }
 
-// Delete a user with specified user id in the request
 exports.delete = (req, res)=>{
     const id = req.params.id;
 

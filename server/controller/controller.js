@@ -1,8 +1,7 @@
 var Userdb = require('../model/model');
 
 exports.create = (req,res)=>{
-    console.log("didn't work!");
-    // validate request
+
     if(!req.body){
         res.status(400).send({ message : "Content can not be emtpy!"});
         return;
@@ -27,7 +26,6 @@ exports.create = (req,res)=>{
 }
 
 exports.find = (req, res) => {
-    console.log("Worked!");
     Userdb.find()
     .then(user => {
         res.send(user)
@@ -39,11 +37,10 @@ exports.find = (req, res) => {
 
 exports.findOneUser = (req, res) => {
     const {email} = req.query
-    console.log(email)
+
     Userdb.findOne({email})
             .then(data =>{
                 if(!data) {
-                    // res.render('answer.ejs')
                     res.status(404).send({ message : "Not found user with email "+ email })
                 } else {
                     res.send(data)
@@ -54,20 +51,21 @@ exports.findOneUser = (req, res) => {
             })
 }
 
-exports.update = (req, res)=>{
+exports.update = (req, res) => {
+
     if(!req.body){
         return res
             .status(400)
             .send({ message : "Data to update can not be empty"})
     }
 
-    const id = req.params.id;
+    const {id} = req.body;
     Userdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
         .then(data => {
             if(!data){
                 res.status(404).send({ message : `Cannot Update user with ${id}. Maybe user not found!`})
             }else{
-                res.send(data)
+                res.redirect("/")
             }
         })
         .catch(err =>{

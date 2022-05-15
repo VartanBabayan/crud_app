@@ -37,6 +37,7 @@ route.get('/update-user', services.update_user)
 // API
 route.post('/api/users', controller.create);
 route.get('/api/users/', controller.find);
+route.get('/api/users/find-by-id', controller.findById);
 route.get('/api/users/one-user', controller.findOneUser);
 route.post('/api/users/update/', controller.update);
 route.delete('/api/users/:id', controller.delete);

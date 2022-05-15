@@ -38,7 +38,7 @@ route.get('/update-user', services.update_user)
 route.post('/api/users', controller.create);
 route.get('/api/users/', controller.find);
 route.get('/api/users/one-user', controller.findOneUser);
-route.put('/api/users/:id', controller.update);
+route.post('/api/users/update/', controller.update);
 route.delete('/api/users/:id', controller.delete);
 
 module.exports = route

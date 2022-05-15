@@ -51,6 +51,11 @@ a {
     box-shadow: 1px 3px 10px #e9ecef;
 }
 
+.buttons
+{
+    display: flex;
+}
+
 .text-dark{
     color: var(--border);
 }

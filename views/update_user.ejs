@@ -16,9 +16,11 @@
             <span class="text-light">Use the below form to Update an account</span>
         </div>
 
+<!-- <p><%= user._id %></p> -->
+
         <!-- add user form -->
          <!-- form handling -->
- <form method="POST" class="update_user">
+ <form action="/api/users/update/" method="POST" class="update_user">
     <div class="new_user">
         <div class="form-group">
             <label for="name" class="text-light">Name</label>
@@ -54,7 +56,7 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn text-dark update">Save</button>
+            <button type="submit" class="btn text-dark update">Update</button>
         </div>
 
     </div>

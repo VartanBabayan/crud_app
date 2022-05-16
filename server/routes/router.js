@@ -33,6 +33,7 @@ route.get('/update-user', services.update_user)
  *  @method GET /find-user
  */
   route.get('/about', services.about)
+  route.get('/answer', services.answer)
 
 // API
 route.post('/api/users', controller.create);

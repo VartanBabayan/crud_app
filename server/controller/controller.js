@@ -37,13 +37,15 @@ exports.find = (req, res) => {
 
 exports.findOneUser = (req, res) => {
     const {email} = req.query
-
+    console.log("CHEEEEEEECK");
     Userdb.findOne({email})
             .then(data =>{
                 if(!data) {
                     res.status(404).send({ message : "Not found user with email "+ email })
                 } else {
-                    res.send(data)
+                    console.log("data " + data.email)
+                    //res.send(data)
+                    res.redirect(`/answer?name=${data.name}&email=${data.email}&status=${data.status}&gender=${data.gender}`)
                 }
             })
             .catch(err => {

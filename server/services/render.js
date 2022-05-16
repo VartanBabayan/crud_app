@@ -34,3 +34,10 @@ exports.find_user = (req, res) =>{
 exports.about = (req, res) =>{
     res.render('about')
 }
+
+
+exports.answer = (req, res) =>{
+    const {name, email, status, gender} = req.query
+    console.log(name + " " + email + " " + status)
+    res.render('answer', {name, email, status, gender})
+}

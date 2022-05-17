@@ -41,3 +41,7 @@ exports.answer = (req, res) =>{
     console.log(name + " " + email + " " + status)
     res.render('answer', {name, email, status, gender})
 }
+
+exports.not_found = (req, res) =>{
+    res.render('not_found')
+}

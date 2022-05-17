@@ -41,7 +41,8 @@ exports.findOneUser = (req, res) => {
     Userdb.findOne({email})
             .then(data =>{
                 if(!data) {
-                    res.status(404).send({ message : "Not found user with email "+ email })
+                    //res.status(404).send({ message : "Not found user with email "+ email })
+                    res.redirect(`/not_found`);
                 } else {
                     console.log("data " + data.email)
                     //res.send(data)

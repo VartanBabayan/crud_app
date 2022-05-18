@@ -3,15 +3,31 @@
 <%- include('include/_header') %>
 <!-- /include header -->
 
-
-    <!-- Main Site -->
-    <main id="site-main">
-        <p>Name: <%- name %> </p>
-        <p>Email: <%- email %></p>
-        <p>Status: <%- status %></p>
-        <p>Gender: <%- gender %></p>
-    </main>
-<!-- /Main Site -->
+<main id="site-main">
+    <div class="container">
+        <!-- form handling -->
+        <form action="/" method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td><%= name %></td>
+                            <td><%= email %></td>
+                            <td><%= gender %></td>
+                            <td><%= status %></td>
+                        </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>
 
 
 <!-- include footer -->

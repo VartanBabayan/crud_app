@@ -34,6 +34,7 @@ route.get('/update-user', services.update_user)
  */
   route.get('/about', services.about)
   route.get('/answer', services.answer)
+  route.get('/not_found', services.not_found)
 
 // API
 route.post('/api/users', controller.create);
